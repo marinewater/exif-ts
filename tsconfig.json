@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "allowJs": false,
+    "sourceMap": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "lib": [
+      "es6",
+      "DOM"
+    ],
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/**/*.ts",
+    "index.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
