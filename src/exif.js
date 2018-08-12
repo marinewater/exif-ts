@@ -49,7 +49,8 @@ export class Exif {
         const length = this._binaryImage.byteLength;
         while (offset < length) {
             if (this._binaryImage.getUint8(offset) !== 0xFF) {
-                throw new Error('not a valid jpeg');
+                throw new Error(`Not a valid marker at offset ${offset}, ` +
+                    `found: ${this._binaryImage.getUint8(offset)}`);
             }
             const marker = this._binaryImage.getUint8(offset + 1);
             // we could implement handling for other markers here,
